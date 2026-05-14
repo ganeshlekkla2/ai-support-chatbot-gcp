@@ -1,0 +1,11 @@
+{
+  "name": "bfa88583-df53-4b8f-8ac0-ac84e390dd09",
+  "displayName": "check_order_status",
+  "parameters": [ {
+    "id": "order_id",
+    "entityType": "@sys.any",
+    "redact": true
+  } ],
+  "priority": 500000,
+  "numTrainingPhrases": 25
+}

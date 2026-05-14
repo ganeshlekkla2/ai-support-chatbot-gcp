@@ -1,0 +1,98 @@
+{
+  "name": "00000000-0000-0000-0000-000000000000",
+  "displayName": "Default Start Flow",
+  "description": "A start flow created along with the agent",
+  "transitionRoutes": [ {
+    "intent": "Default Welcome Intent",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Hi! How are you doing?", "Hello! How can I help you?", "Good day! What can I do for you today?", "Greetings! How can I assist?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "83d67274-f24d-4e4e-9f7f-6ddb26e5bb7d"
+  }, {
+    "intent": "get_opening_hours",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "We are open from 9:00 AM to 6:00 PM IST, Monday to Friday." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "3c566896-2c01-4022-9eae-61efdb25428d"
+  }, {
+    "intent": "check_order_status",
+    "triggerFulfillment": {
+      "webhook": "get_order_status_webhook",
+      "tag": "check_order_status"
+    },
+    "name": "16fecd31-6cea-49fb-8a2e-cd6c21cbb9f8"
+  }, {
+    "intent": "handle_complaint",
+    "triggerFulfillment": {
+      "webhook": "get_order_status_webhook",
+      "tag": "handle_complaint",
+      "returnPartialResponses": true
+    },
+    "name": "729aa488-63e0-4d76-bbab-d658c0b9b523"
+  }, {
+    "intent": "creator",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Mr.Ganesh Kumar Lekkala" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "f454203b-d5ee-4c07-8eb4-5807c8ceea89"
+  }, {
+    "intent": "return_policy",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "Our return policy allows for returns within 30 days of purchase. Items must be in their original condition with tags attached." ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "1e2c2e5b-e5b3-4333-af17-6f47436a99fe"
+  } ],
+  "eventHandlers": [ {
+    "event": "sys.no-match-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "fcce7eab-0904-4faa-bb8f-364c65a56b2a"
+  }, {
+    "event": "sys.no-input-default",
+    "triggerFulfillment": {
+      "messages": [ {
+        "text": {
+          "text": [ "I didn't get that. Can you say it again?", "I missed what you said. What was that?", "Sorry, could you say that again?", "Sorry, can you say that again?", "Can you say that again?", "Sorry, I didn't get that. Can you rephrase?", "Sorry, what was that?", "One more time?", "What was that?", "Say that one more time?", "I didn't get that. Can you repeat?", "I missed that, say that again?" ]
+        },
+        "languageCode": "en"
+      } ]
+    },
+    "name": "e9c8169d-83ce-401f-a994-b58e6084ecde"
+  } ],
+  "nluSettings": {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001
+  },
+  "nluSettingsList": [ {
+    "modelType": "MODEL_TYPE_ADVANCED",
+    "classificationThreshold": 0.30000001,
+    "customConfigKey": "2b8dc5f7-c2aa-430b-8f6a-16834c24a095",
+    "languageCode": "en"
+  } ]
+}

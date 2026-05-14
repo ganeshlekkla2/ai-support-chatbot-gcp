@@ -1,0 +1,11 @@
+{
+  "name": "6cc98718-3c97-40ab-8d13-5044571490b9",
+  "displayName": "get_order_status_webhook",
+  "genericWebService": {
+    "uri": "https://chatbot-webhook-522839680613.asia-south1.run.app",
+    "webhookType": "STANDARD"
+  },
+  "timeout": {
+    "seconds": 5
+  }
+}
