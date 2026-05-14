@@ -1,0 +1,10 @@
+{
+  "orders": {
+    "order_101": {
+      "customer_name": "Ganesh",
+      "status": "Shipped",
+      "delivery_date": "2025-08-20",
+      "items": ["t-shirt", "Laptop Sleeve", "USB-C Cable"]
+    }
+  }
+}
